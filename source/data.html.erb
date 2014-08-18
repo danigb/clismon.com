@@ -1,0 +1,7 @@
+<% clismon_data.groups_by_name.values.each do |group| %>
+  <h2><%= group.title %></h2>
+  <% group.clips.each do |clip| %>
+    <%= clip.id %> / <%= clip.name %> / <%= clip.locator %><br>
+    <%= climage(clip.group_name + '/' + clip.locator) %><br>
+  <% end %>
+<% end %>

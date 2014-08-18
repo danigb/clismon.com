@@ -1,4 +1,5 @@
-###
+require "lib/clismon_helpers"
+helpers ClismonHelpers
 # Compass
 ###
 
@@ -23,6 +24,10 @@
 # with_layout :admin do
 #   page "/admin/*"
 # end
+
+ClismonHelpers::GROUPS.each do |group|
+  proxy "/#{group}", "section.html", locals: { group_name: group }, ignore: true
+end
 
 # Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)
 # proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
