@@ -2,6 +2,7 @@
   <h2><%= group.title %></h2>
   <% group.clips.each do |clip| %>
     <%= clip.id %> / <%= clip.name %> / <%= clip.locator %><br>
-    <%= climage(clip.group_name + '/' + clip.locator) %><br>
+    <%= climage((clip.group_name ? clip.group_name : 'nil') + '/' +
+      (clip.locator ? clip.locator : 'nil')) %><br>
   <% end %>
 <% end %>
