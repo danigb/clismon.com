@@ -1,0 +1,1 @@
+!function(){$.clismon={},("undefined"==typeof console||"undefined"==typeof console.log)&&(console={log:function(){},debug:function(){}})}(jQuery);

@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+    <head>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+        <meta name="last-update" content="2014/10/20">
+        <title>Industrias :: Clismón</title>
+        <script src="IE8.js" type="text/">
+            IE7_PNG_SUFFIX=".png";
+        </script>
+        <!--[if lt IE 9]>
+        <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+        <![endif]-->
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="Author" content="Miguel Brieva" />
+        <meta name="Keywords" content="clismon, brieva, miguel" />
+        <meta name="Description" content="Miguel Brieva web site" />
+        <meta http-equiv="imagetoolbar" content="no" />
+        <link rel="shortcut icon" href="/clismon.ico" type="image/x-icon" />
+        <link rel="icon" href="/clismon.ico" type="image/ico" />
+
+        <link href="stylesheets/normalize-6197e73d.css" rel="stylesheet" type="text/css" /><link href="stylesheets/all-a8a7d0f2.css" rel="stylesheet" type="text/css" />
+        <script src="javascripts/all-3ce30983.js" type="text/javascript"></script>
+
+        <!-- script type="text/javascript" src="iepngfix_tilebg.js"></script -->
+          <style type="text/css">
+    html, body {margin:0; padding:0; width:100%; height:100%; overflow: hidden; background-color: #B9CDD8;}
+    .layer {position:absolute; height:100%; right: -100px;}
+    #background {z-index:1;}
+    #playground {width: 200px; z-index: 1000;
+    }
+
+    a.area {display: block; position: absolute; text-indent: -1000px; overflow: hidden; border: 1px solid transparent;
+            background-color: transparent; background-image:url(/images/transparent.gif);
+    }
+
+    .red {
+      border: 1px solid red; opacity: 0.3;
+    }
+    img, div { behavior: url(iepngfix.htc) }
+  </style>
+
+  <script type="text/javascript">
+    (function() {
+      var bgHeight = 1296;
+      var bgWidth = 2850;
+
+      var layers = ['portada-activa', 'clismon', 'lecrou', 'doplacie',
+        'historietas', 'las-buenas-noches', 'bueh', 'dinero', 'el-otro-mundo',
+        'enciclopedia-universal-clismon', 'memorias-de-la-tierra', 'delirios-por-encargo',
+        'muvirecor'];
+
+
+      $(function() {
+        if ($("#obsolete").size() > 0) {
+          $.autosize.config.active = false;
+          return;
+        }
+
+        var ratio = 0;
+        var self = $(window);
+
+        $(window).resize(function() {
+          ratio = bgHeight / self.height();
+          $("#playground").width(parseInt(bgWidth / ratio));
+        });
+
+        $(window).trigger('resize');
+
+        $(window).load(function() {
+          $.each(layers, function() {
+            var layer = $("<img id='" + this + "' />");
+            layer.attr('src', 'https://s3-eu-west-1.amazonaws.com/clismon/portada/' + this + '.png');
+            layer.attr('class', 'layer label');
+            layer.attr('style', 'z-index: 50; display: none;');
+            $("#wrap").append(layer);
+          });
+          $("#clismon").show();
+        });
+
+        $('.link').hover(function() {
+          var id = '#' + $(this).attr('id').substring(3);
+          $(id).show();
+        }, function() {
+          var id = '#' + $(this).attr('id').substring(3);
+          $(id).hide();
+        });
+
+        $('#go-portada-activa').hover(function() {
+          $("#clismon").hide();
+        }, function() {
+          $("#clismon").show();
+        });
+      });
+    })(jQuery);
+  </script>
+
+
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+        <div id="obsolete" style="position: absolute; border: 1px solid #F7941D; background: #FEEFDA; text-align: center; clear: both; left: 0; right: 0; top: 0; height: 100%; width: 100%; bottom: 0; z-index: 21000;">
+        <div style='width: 640px; margin: 0 auto; text-align: left; padding: 0; overflow: hidden; color: black;'>
+        <div style='width: 75px; float: left;'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-warning.jpg' alt='¡Aviso!'/></div>
+        <div style='width: 275px; float: left; font-family: Arial, sans-serif;'>
+        <div style='font-size: 14px; font-weight: bold; margin-top: 12px;'>Tu navegador está obsoleto y no funciona con esta página web.</div>
+        <div style='font-size: 12px; margin-top: 6px; line-height: 12px;'>Para navegar por este sitio, por favor, actualiza su navegador. Recomenamos que uses Firefox.</div>
+        </div>
+        <div style='width: 75px; float: left;'><a href='http://www.mozilla-europe.org/es/firefox/' target='_blank'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-firefox.jpg' style='border: none;' alt='Get Firefox 3.5'/></a></div>
+        <div style='width: 75px; float: left;'><a href='http://www.microsoft.com/downloads/details.aspx?FamilyID=341c2ad5-8c3d-4347-8c03-08cdecd8852b&DisplayLang=es' target='_blank'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-ie8.jpg' style='border: none;' alt='Get Internet Explorer 8'/></a></div>
+        <div style='width: 73px; float: left;'><a href='http://www.apple.com/es/safari/download/' target='_blank'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-safari.jpg' style='border: none;' alt='Get Safari 4'/></a></div>
+        <div style='float: left;'><a href='http://www.google.com/chrome?hl=es' target='_blank'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-chrome.jpg' style='border: none;' alt='Get Google Chrome'/></a></div>
+        </div>
+        </div>
+        <![endif]-->
+        
+<div id="wrap">
+  <img id="background" src="https://s3-eu-west-1.amazonaws.com/clismon/portada/portada.jpg" alt="background" class="layer" />
+</div>
+<div id="playground" class="layer">
+  <a id="go-lecrou" href="/lecrou" class="area link" style="z-index: 301; left: 38.1%; top: 69.59%; width: 3.08%; height: 7.4%; ">enlaces</a>
+  <a id="go-doplacie" href="/doplacie" class="area link" style="z-index: 301; left: 36.91%; top: 49.84%; width: 5.82%; height: 18.2%; ">doplacie</a>
+  <a id="go-historietas" href="/historietas" class="area link" style="z-index: 301; left: 32.21%; top: 46.91%; width: 3.57%; height: 8.02%; ">historietas</a>
+  <a id="go-las-buenas-noches" href="http://lasbuenasnoches.com" class="area link" style="z-index: 301; left: 38.38%; top: 27.93%; width: 4.91%; height: 11.26%; ">las buenas noches</a>
+  <a id="go-bueh" class="area link" href="http://blog.clismon.net" style="z-index: 301; left: 39.08%; top: 7.4%; width: 5.75%; height: 13.11%; ">bueh</a>
+  <a id="go-dinero" class="area link" href="/dinero" style="z-index: 301; left: 52.98%; top: 1.85%; width: 6.03%; height: 15.74%; ">dinero</a>
+  <a id="go-el-otro-mundo" class="area link" href="/elotromundo" style="z-index: 301; left: 57.05%; top: 17.9%; width: 6.03%; height: 10.18%; ">el otro mundo</a>
+  <a id="go-enciclopedia-universal-clismon" href="/enciclopedia" class="area link" style="z-index: 301; left: 65.05%; top: 27%; width: 2.24%; height: 5.7%; ">encliclopedia universal clismon</a>
+  <a id="go-memorias-de-la-tierra" class="area link" href="/tierra" style="z-index: 301; left: 59.92%; top: 32.56%; width: 7.43%; height: 14.04%; ">memorias de la tierra</a>
+  <a id="go-delirios-por-encargo" class="area link" href="/encargos" style="z-index: 301; left: 60.91%; top: 46.91%; width: 6.38%; height: 17.74%; ">delirios por encargo</a>
+  <a id="go-muvirecor" class="area link" href="/muvirecor" style="z-index: 301; left: 62.31%; top: 64.81%; width: 2.73%; height: 6.32%; ">muvirecor</a>
+  <a id="go-portada-activa" class="area link" href="#" style="z-index: 3001; left: 71%; top: 65%; width: 16%; height: 31%; ">clismon</a>
+</div>
+
+        <div class="license" style="display: block; width: 1px; height: 1px; position: absolute; left: -10px; top: -10px; overflow: hidden;">
+            <h2>Author</h2>
+            <p>
+                Industrias clismón por Miguel Brieva.
+            </p>
+            <h2>License</h2>
+            <p>
+                Todos los contenidos de esta web tienen la siguiente licencia:
+            </p>
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/es/">
+            <img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/3.0/es/88x31.png" /></a>
+            <br />Esta obra est&#225; bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/es/">licencia de Creative Commons</a>.
+        </div>
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-11032039-2']);
+            _gaq.push(['_trackPageview']);
+            (function() {
+                var ga = document.createElement('script');
+                ga.type = 'text/javascript';
+                ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+    </body>
+</html>
