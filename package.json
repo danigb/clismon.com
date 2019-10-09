@@ -1,0 +1,12 @@
+{
+  "name": "clismon.com",
+  "version": "1.0.0",
+  "description": "Industrias Clismón",
+  "scripts": {
+    "build": "bundle exec middleman build --verbose",
+    "docker:bash": "docker-compose run --rm bash",
+    "docker:build": "docker-compose run --rm build"
+  },
+  "license": "Creative Commons 4.0",
+  "homepage": "https://github.com/danigb/clismon.com#readme"
+}

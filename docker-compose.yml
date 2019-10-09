@@ -1,0 +1,14 @@
+version: '3.6'
+
+services:
+  build:
+    build: .
+    command: npm run build
+    volumes:
+      - .:/app:cached
+
+  bash:
+    build: .
+    command: /bin/bash
+    volumes:
+      - .:/app:cached
