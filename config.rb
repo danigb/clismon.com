@@ -2,7 +2,7 @@ require "lib/clismon_helpers"
 helpers ClismonHelpers
 
 ClismonHelpers::GROUPS.each do |group|
-  proxy "/#{group}", "section.html", locals: { group_name: group }, ignore: true
+  proxy "/#{group}.html", "section.html", locals: { group_name: group }, ignore: true
 end
 
 set :css_dir, 'stylesheets'
